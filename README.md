@@ -1,46 +1,104 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rick and Morty Character Catalog | Orys Tech Challenge
 
-## Available Scripts
+[![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Latest-38B2AC)](https://tailwindcss.com/)
+[![React Query](https://img.shields.io/badge/React_Query-Latest-ff4154)](https://tanstack.com/query/latest)
 
-In the project directory, you can run:
+## 📌 Sobre o Projeto
 
-### `npm start`
+Este projeto é um catálogo de personagens da série Rick and Morty, desenvolvido como parte do desafio técnico para a Orys. A aplicação consome a [API oficial do Rick and Morty](https://rickandmortyapi.com/api/character) e apresenta uma interface responsiva e acessível para explorar os personagens da série.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🚀 Features Implementadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ✅ Listagem de personagens com informações detalhadas (nome, imagem, status)
+- ✅ Filtro por nome com debounce para melhor performance
+- ✅ Scroll infinito para carregamento dinâmico
+- ✅ Design responsivo (mobile e desktop)
+- ✅ Feedback visual de carregamento com skeletons
+- ✅ Tratamento de erros com mensagens amigáveis
+- ✅ Modo escuro/claro
+- ✅ Suporte para múltiplos idiomas (EN/PT)
+- ✅ Cache inteligente com React Query
+- ✅ Testes unitários com Jest e React Testing Library
 
-### `npm test`
+### 🛠️ Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React 18** com Hooks
+- **TypeScript**
+- **Tailwind CSS** para estilização
+- **React Query** para gerenciamento de cache e dados
+- **i18next** para internacionalização
+- **Jest** e **React Testing Library** para testes
+- **Radix UI** para componentes acessíveis
+- **Lucide React** para ícones
+- **Vite** como bundler
 
-### `npm run build`//
+### ⚙️ Organização do Código
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O projeto segue uma estrutura organizada e modular:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  ├── components/
+  │   ├── atoms/        # Componentes básicos
+  │   ├── molecules/    # Composição de atoms
+  │   ├── organisms/    # Composição de molecules
+  │   └── ui/           # Componentes de UI reutilizáveis
+  ├── contexts/         # Contextos React
+  ├── hooks/            # Hooks customizados
+  ├── services/         # Serviços e API
+  ├── types/           # Definições de tipos
+  └── pages/           # Páginas da aplicação
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🌟 Diferenciais Implementados
 
-### `npm run eject`
+1. **React Query**
+   - Gerenciamento eficiente de cache
+   - Revalidação automática
+   - Tratamento de estados de loading e error
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Testes**
+   - Cobertura de testes para componentes principais
+   - Testes de integração para fluxos importantes
+   - Mocks para chamadas de API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Acessibilidade**
+   - Uso apropriado de ARIA labels
+   - Navegação por teclado
+   - Mensagens de status para screen readers
+   - Contraste adequado
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Performance**
+   - Lazy loading de imagens
+   - Code splitting
+   - Debounce em pesquisas
+   - Memoização de componentes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 🚀 Como Executar
 
-## Learn More
+```bash
+# Clonar o repositório
+git clone https://github.com/Robetjunior/Rick-and-Morty-Character-Database---Orys-Technical-Challenge.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Instalar dependências
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Iniciar o servidor de desenvolvimento
+npm run dev
+
+# Executar testes
+npm test
+```
+
+### 👤 Autor
+
+**José Roberto Ferreira Junior**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josé-roberto-dev/)
+
+---
+
+Desenvolvido como parte do desafio técnico para a Orys ⚡
