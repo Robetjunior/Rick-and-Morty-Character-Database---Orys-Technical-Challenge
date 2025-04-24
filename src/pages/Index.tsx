@@ -1,4 +1,3 @@
-
 import { useState, useEffect, Suspense, lazy } from "react";
 import { useInView } from "react-intersection-observer";
 import { Loader } from "lucide-react";
@@ -71,17 +70,19 @@ export const Index = () => {
   return (
     <div className="min-h-[600px] min-w-[320px] h-screen p-4 md:p-8 bg-background">
       <div className="max-w-[1440px] mx-auto">
-        <header className="flex justify-between items-center mb-6 md:mb-8" role="banner">
+        <header className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6 md:mb-8" role="banner">
+          <div className="flex gap-2 order-1 sm:order-none" role="toolbar" aria-label="Theme and language controls">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
           <h1 
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-green-400 to-purple-600 text-transparent bg-clip-text transition-all duration-300 flex-1"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-green-400 to-purple-600 text-transparent bg-clip-text transition-all duration-300"
             tabIndex={0}
           >
             {t('common.appName')}
           </h1>
-          <div className="flex gap-2" role="toolbar" aria-label="Theme and language controls">
-            <ThemeToggle />
-            <LanguageToggle />
-          </div>
+          {/* Empty div to balance the flex layout on larger screens */}
+          <div className="hidden sm:block w-[88px]"></div>
         </header>
         
         <main>
@@ -89,7 +90,7 @@ export const Index = () => {
             value={searchTerm} 
             onChange={setSearchTerm}
             placeholder={t('common.search')}
-            className="max-w-2xl"
+            className="max-w-2xl mx-auto"
           />
 
           <CharacterProvider searchTerm={searchTerm}>
