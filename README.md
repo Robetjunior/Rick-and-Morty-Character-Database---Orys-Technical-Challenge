@@ -10,6 +10,11 @@
 
 Este projeto é um catálogo de personagens da série Rick and Morty, desenvolvido como parte do desafio técnico para a Orys. A aplicação consome a [API oficial do Rick and Morty](https://rickandmortyapi.com/api/character) e apresenta uma interface responsiva e acessível para explorar os personagens da série.
 
+### 🚀 Live Demo
+
+Acesse o projeto em: [Rick and Morty Character Catalog](https://rick-and-morty-character-database-orys-technical-challenge.vercel.app/)
+
+
 ### 🚀 Features Implementadas
 
 - ✅ Listagem de personagens com informações detalhadas (nome, imagem, status)
