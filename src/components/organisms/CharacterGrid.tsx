@@ -1,6 +1,8 @@
+
 import { memo } from "react";
 import { Character } from "@/types/character";
 import { CharacterCard } from "@/components/molecules/CharacterCard";
+import { CharacterCardSkeletonGrid } from "@/components/organisms/CharacterCardSkeletonGrid";
 import { useTranslation } from "react-i18next";
 
 interface CharacterGridProps {
@@ -11,6 +13,10 @@ interface CharacterGridProps {
 export const CharacterGrid = memo(
   ({ characters, isLoading }: CharacterGridProps) => {
     const { t } = useTranslation();
+
+    if (isLoading) {
+      return <CharacterCardSkeletonGrid />;
+    }
 
     if (characters.length === 0 && !isLoading) {
       return (
