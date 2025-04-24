@@ -1,3 +1,4 @@
+
 import { useState, useEffect, Suspense, lazy } from "react";
 import { useInView } from "react-intersection-observer";
 import { Loader } from "lucide-react";
@@ -5,6 +6,9 @@ import { useTranslation } from "react-i18next";
 import { CharacterProvider, useCharacters } from "@/contexts/CharacterContext";
 import { SearchBar } from "@/components/organisms/SearchBar";
 import { CharacterGrid } from "@/components/organisms/CharacterGrid";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { ThemeToggle } from "@/components/atoms/ThemeToggle";
+import { LanguageToggle } from "@/components/atoms/LanguageToggle";
 
 const ErrorMessage = lazy(() => import("@/components/atoms/ErrorMessage"));
 
@@ -61,6 +65,7 @@ const CharacterGridContainer = () => {
 
 export const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const isMobile = useIsMobile();
   const { t } = useTranslation();
   
   return (
@@ -73,6 +78,10 @@ export const Index = () => {
           >
             {t('common.appName')}
           </h1>
+          <div className="flex gap-2" role="toolbar" aria-label="Theme and language controls">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
         </header>
         
         <main>
