@@ -3,12 +3,6 @@ import { CharacterResponse } from "@/types/character";
 
 const API_URL = "https://rickandmortyapi.com/api/character";
 
-/**
- * Fetches characters from Rick and Morty API with pagination and filtering
- * @param page Current page number
- * @param name Optional name filter
- * @returns Promise with character data
- */
 export const fetchCharacters = async (page: number, name?: string): Promise<CharacterResponse> => {
   const params = new URLSearchParams();
   if (page) params.append("page", page.toString());
@@ -51,7 +45,6 @@ export const fetchCharacters = async (page: number, name?: string): Promise<Char
     return data;
     
   } catch (error) {
-    // Handle abort errors separately to avoid unnecessary error reporting
     if (error instanceof DOMException && error.name === "AbortError") {
       console.warn("Request was aborted due to timeout");
       throw new Error("Request timed out. Please try again.");
@@ -62,11 +55,6 @@ export const fetchCharacters = async (page: number, name?: string): Promise<Char
   }
 };
 
-/**
- * Get character by ID
- * @param id Character ID
- * @returns Promise with character data
- */
 export const getCharacterById = async (id: number) => {
   try {
     const response = await fetch(`${API_URL}/${id}`);
@@ -80,10 +68,6 @@ export const getCharacterById = async (id: number) => {
   }
 };
 
-/**
- * Prefetches character data for better user experience
- * This can be used to preload the next page of results
- */
 export const prefetchNextPage = async (page: number, name?: string): Promise<void> => {
   try {
     await fetchCharacters(page, name);
