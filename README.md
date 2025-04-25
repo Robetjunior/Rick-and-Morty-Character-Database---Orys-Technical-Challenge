@@ -1,5 +1,5 @@
 
-# Rick and Morty Character Catalog | Orys Tech Challenge
+# Rick and Morty Character Catalog | Orys & Claro Tech Challenge
 
 [![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue)](https://www.typescriptlang.org/)
